@@ -1,6 +1,6 @@
 #include <stack>
 class MyQueue {
-    std::stack s1, s2;
+    std::stack<int> s1, s2;
 public:
     void push(int x) {
         s1.push(x);

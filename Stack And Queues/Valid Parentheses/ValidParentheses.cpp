@@ -3,8 +3,8 @@
 #include <unordered_map>
 
 bool isValid(const std::string &s) {
-    std::vector stack;
-    std::unordered_map map = {
+    std::vector<char> stack;
+    std::unordered_map<char, char> map = {
         {'{', '}'},
         {'[', ']'},
         {'(', ')'}

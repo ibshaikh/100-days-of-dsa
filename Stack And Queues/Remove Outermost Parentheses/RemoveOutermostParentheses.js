@@ -2,10 +2,17 @@ var removeOuterParentheses = function(s) {
     let stack = [];
     let ans = "";
 
-    for(let i=0; i 1) ? s[i] : "");
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            if (stack.length > 0) {
+                ans += s[i];
+            }
+            stack.push(s[i]);
         } else {
-            ans += ((stack.length > 1) ? s[i] : "");
             stack.pop();
+            if (stack.length > 0) {
+                ans += s[i];
+            }
         }
     }
     return ans;

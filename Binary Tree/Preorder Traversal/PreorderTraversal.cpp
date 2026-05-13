@@ -1,6 +1,8 @@
+#include <vector>
+
 class Solution {
 public:
-    void traversal(TreeNode* curr, vector<int>& ans) {
+    void traversal(TreeNode* curr, std::vector<int>& ans) {
         if (!curr) return;
 
         ans.push_back(curr->val);
